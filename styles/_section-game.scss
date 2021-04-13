@@ -8,16 +8,17 @@
   clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 0%);
 
   @include respond(tab-land) {
-    height: 75vh;
+    height: auto;
+    clip-path: polygon(100% 0%, 100% 87%, 0% 100%, 0% 0%);
   }
 
   @include respond(tab-port) {
-    height: 200vh;
+    height: 120vh;
+
     clip-path: polygon(100% 0%, 100% 95%, 0% 100%, 0% 0%);
   }
 
   @include respond(phone) {
-    height: auto;
     clip-path: polygon(100% 0%, 100% 98%, 0% 100%, 0% 0%);
   }
 }

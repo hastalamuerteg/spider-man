@@ -13,6 +13,7 @@
 
   @include respond(tab-land) {
     height: 65vh;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
   }
 
   @include respond(tab-port) {

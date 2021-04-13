@@ -20,7 +20,7 @@
 }
 @media (max-width: 56.25em) {
   .scroll__down {
-    transform: translateY(12rem);
+    transform: translateY(15rem);
   }
 }
 @media (max-width: 37.5em) {
@@ -59,8 +59,6 @@
 }
 @media (max-width: 37.5em) {
   .scroll__down span {
-    height: 1rem;
-    width: 1rem;
     left: 60%;
   }
 }
@@ -184,6 +182,10 @@
   color: #AA2827;
 }
 
+.content__about {
+  padding: 0 1rem;
+}
+
 .paragraph__about {
   margin: 1rem auto;
   padding: 0 8rem;
@@ -205,13 +207,11 @@
   align-items: center;
 }
 @media (max-width: 56.25em) {
-  .section__about--spider img {
-    height: 30rem;
-  }
-}
-@media (max-width: 56.25em) {
   .section__about--spider {
     display: none;
+  }
+  .section__about--spider img {
+    height: 25rem;
   }
 }
 @media (max-width: 37.5em) {
@@ -275,18 +275,18 @@
 }
 @media (max-width: 75rem) {
   .section__game {
-    height: 75vh;
+    height: auto;
+    clip-path: polygon(100% 0%, 100% 87%, 0% 100%, 0% 0%);
   }
 }
 @media (max-width: 56.25em) {
   .section__game {
-    height: 200vh;
+    height: 120vh;
     clip-path: polygon(100% 0%, 100% 95%, 0% 100%, 0% 0%);
   }
 }
 @media (max-width: 37.5em) {
   .section__game {
-    height: auto;
     clip-path: polygon(100% 0%, 100% 98%, 0% 100%, 0% 0%);
   }
 }
@@ -417,6 +417,7 @@
 @media (max-width: 75rem) {
   .section__critics {
     height: 65vh;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 @media (max-width: 56.25em) {
@@ -539,12 +540,12 @@ html {
 }
 @media (max-width: 56.25em) {
   html {
-    font-size: 50%;
+    font-size: 57%;
   }
 }
 @media (max-width: 75rem) {
   html {
-    font-size: 56.25%;
+    font-size: 60%;
   }
 }
 @media (min-width: 112.5em) {
