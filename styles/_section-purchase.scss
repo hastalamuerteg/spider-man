@@ -1,0 +1,43 @@
+@use 'config';
+@import 'mixins';
+@import 'utilities';
+
+.section__purchase {
+    @extend %centered-box;
+    flex-direction: row;
+
+    @include respond(phone) {
+        flex-direction: column;
+        margin: 2rem 0 3rem 0;
+    }
+}
+
+.game__case {
+    display: inline-block;
+
+    img {
+        max-height: 20rem;
+        transition: all .2s;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.game__buy {
+    display: inline-block;
+    margin-left: 10rem;
+
+    h2 {
+        color: config.$primary-red;
+        margin-bottom: 2rem;
+        letter-spacing: .2rem;
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+    @include respond(phone) {
+        margin: 0 auto;
+    }
+}

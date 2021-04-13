@@ -1,0 +1,85 @@
+@use 'config';
+@use 'utilities';
+@import 'mixins';
+
+.section__game {
+    background-color: config.$tertiary-blue;
+    height: 100vh;
+    clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 0%);
+
+    @include respond(tab-land) {
+        height: 75vh;
+    }
+
+    @include respond(phone) {
+        height: auto;
+        clip-path: polygon(100% 0%, 100% 98%, 0% 100%, 0% 0%);
+    }
+}
+
+.section__game--title {
+    margin: 1.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 1.5rem;
+    transition: all .2s;
+    
+    &:hover {
+        transform: scale(1.02);
+        color: config.$secondary-red;
+    }
+}
+
+.game__content {
+    @extend %centered-box;
+}
+
+.game__cards {
+    padding: 2rem;
+    display: grid;
+    grid-gap: .6rem;
+    grid-template-columns: repeat(3, 1fr);
+    color: config.$font-color;
+
+    @include respond(phone) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        padding: 1rem 4rem;
+
+        p {
+            margin: 0 auto;
+        }
+    }
+}
+
+.card {
+    @extend %centered-box;
+
+    h2 {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    p {
+        padding: 1rem 4rem;
+        text-align: center;
+    }
+}
+
+.card-image {
+    border-radius: .2rem;
+    height: 10rem;
+    box-shadow: .2rem .5rem 2rem rgba(175, 165, 165, 0.171);
+    transition: all .2s;
+
+    &:hover {
+        transform: scale(1.07);
+    }
+
+    @include respond(phone) {
+        height: 15rem;
+    }
+}

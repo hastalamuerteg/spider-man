@@ -1,0 +1,57 @@
+@use 'config';
+@import 'mixins';
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    height: 80vh;
+    background-color: config.$primary-red;
+
+    @include respond(tab-land) {
+        height: 50vh;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+        height: auto;
+    }
+}
+
+.footer__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 8rem;
+    }
+}
+
+.copy {
+    font-size: .8rem;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        line-height: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: config.$font-color;
+    }
+
+    @include respond(phone) {
+        text-align: center;
+    }
+}

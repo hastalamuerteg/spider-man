@@ -1,0 +1,27 @@
+@use 'config';
+
+%centered-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+%button {
+    padding: 1rem 3rem;
+    background-color: config.$secondary-red;
+    text-decoration: none;
+    color: config.$font-color;
+    font-weight: 900;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all .2s;
+    z-index: 1;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 .4rem 2rem rgba(32, 38, 126, 0.699);
+    }
+}

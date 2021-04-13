@@ -1,0 +1,55 @@
+@use 'config'; 
+@use 'keyframes';
+@import 'mixins';
+
+
+
+.header {
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: top;
+
+    @include respond(tab-land) {
+        background-position:20%;
+    }
+
+    @include respond(phone) {
+        background-position:30%;
+    }
+}
+
+.logo__box {
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+
+    @include respond(tab-land) {
+        top: 60%;
+    }
+
+    @include respond(tab-port) {
+        top: 40%;
+        left: 15%;
+    }
+
+    @include respond(phone) {
+        top: 35%;
+        left: 5%;
+    }
+}
+
+.logo {
+    height: 10rem;
+
+    @include respond(tab-land) {
+        height: 8rem;
+    }
+
+    @include respond(phone) {
+        height: 8rem;
+    }
+}
+

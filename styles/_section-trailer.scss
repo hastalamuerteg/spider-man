@@ -1,0 +1,43 @@
+@use 'config';
+@use 'utilities';
+@import 'mixins';
+
+
+.section__trailer {
+    position: relative;
+    
+    video {
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+.section__trailer--cover {
+    @extend %centered-box;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right bottom, #3400009a, #11182a93); 
+}
+
+.trailer__content {
+    @extend %centered-box;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: .6rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+    }
+
+    a {
+        @extend %button;
+    }
+
+}
+

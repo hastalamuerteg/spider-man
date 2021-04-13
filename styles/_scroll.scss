@@ -1,0 +1,66 @@
+@use 'config';
+@import 'mixins';
+
+.scroll__down {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+
+    @include respond(tab-land) {
+        top: 90%;
+        left: 50%;
+    }
+
+    @include respond(phone) {
+        top: 90%;
+        left: 45%;
+    }
+
+    
+    a {
+        padding-top: 4rem;
+        display: inline-block;
+        position: absolute;
+        text-decoration: none;
+        color: config.$font-color;
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-left: -.8rem;
+        border-left: .1rem solid config.$font-color;
+        border-bottom: .1rem solid config.$font-color;
+            
+        box-sizing: border-box;
+        opacity: 0;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -webkit-animation: scrolldown 1.5s infinite;
+        animation: scrolldown 1.5s infinite;
+
+
+
+        &:nth-child(1) {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+
+        &:nth-child(2) {
+            top: 1rem;
+            -webkit-animation-delay: .15s;
+            animation-delay: .15s;
+        }
+
+        &:nth-child(3) {
+            top: 2rem;
+            -webkit-animation-delay: .30s;
+            animation-delay: .30s;
+        }
+    }
+
+    
+}

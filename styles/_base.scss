@@ -1,0 +1,53 @@
+@use 'config';
+@use 'utilities';
+@import 'mixins';
+ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62,5%;
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
+}
+
+body {
+    font-family: config.$font-stack;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.container {
+    line-height: 1.7;
+    color: config.$font-color;
+}
+
+::-webkit-scrollbar {
+    width: .4rem;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .8rem config.$primary-red;
+}
+
+::-webkit-scrollbar-thumb {
+    background: config.$secondary-blue;
+}
+
+.btn-buy {
+    @extend %button;
+}
