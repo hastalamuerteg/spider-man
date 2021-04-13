@@ -3,19 +3,14 @@
 @import "mixins";
 
 .header {
-  position: relative;
-  height: 100vh;
-  background-image: url("./images/background.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__background {
+  width: 100%;
   background-size: cover;
-  background-position: top;
-
-  @include respond(tab-land) {
-    background-position: 20%;
-  }
-
-  @include respond(phone) {
-    background-position: 30%;
-  }
 }
 
 .logo__box {
@@ -25,17 +20,17 @@
   left: 70%;
 
   @include respond(tab-land) {
-    top: 60%;
+    top: 40%;
   }
 
   @include respond(tab-port) {
-    top: 40%;
-    left: 15%;
+    top: 20%;
+    left: 65%;
   }
 
   @include respond(phone) {
-    top: 35%;
-    left: 5%;
+    top: 15%;
+    left: 60%;
   }
 }
 
@@ -43,10 +38,10 @@
   height: 10rem;
 
   @include respond(tab-land) {
-    height: 8rem;
+    height: 10rem;
   }
 
   @include respond(phone) {
-    height: 8rem;
+    height: 6.5rem;
   }
 }

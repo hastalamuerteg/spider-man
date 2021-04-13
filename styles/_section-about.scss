@@ -1,89 +1,95 @@
 @use 'config';
 @use 'utilities';
-@import 'mixins';
-
+@import "mixins";
 
 .section__about {
-    display: flex;
-    justify-content: space-between;
-    background-color: config.$tertiary-blue;
-    height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: config.$tertiary-blue;
+  height: 100vh;
 
-    @include respond(phone) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-    }
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
 }
 
 .heading__about {
-    margin-top: 2rem;
-    font-size: 3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    display: inline-block;
-    background-image: linear-gradient(config.$primary-blue, config.$font-color);
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: all .2s;
-    
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  display: inline-block;
+  background-image: linear-gradient(config.$primary-blue, config.$font-color);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
 
-    &:hover {
-        color: config.$secondary-red;
-    }
+  &:hover {
+    color: config.$secondary-red;
+  }
 }
 
 .content__about {
-    @extend %centered-box;
+  @extend %centered-box;
 }
 
 .paragraph__about {
-    margin: 1rem auto;
-    padding: 0 8rem;
-    text-align: justify;
+  margin: 1rem auto;
+  padding: 0 8rem;
+  text-align: justify;
 
-    @include respond(tab-port) {
-        text-align: center;
-    }
+  @include respond(tab-port) {
+    text-align: center;
+  }
 
-    @include respond(phone) {
-        padding: 0 3rem;
-    }
-
+  @include respond(phone) {
+    padding: 0 3rem;
+  }
 }
 
 .section__about--spider {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    @include respond(tab-port) {
-
-        img {
-           height: 30rem;
-        }
+  @include respond(tab-port) {
+    img {
+      height: 30rem;
     }
+  }
 
-    
-    @include respond(phone) {
-        display: none;
-    }
+  @include respond(tab-port) {
+    display: none;
+  }
 
-
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 .section__about--spider-mobile {
-    display: none;
+  display: none;
 
-    @include respond(phone) {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 4rem;
+  @include respond(phone) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
 
-        img {
-            height: 30rem;
-        }
+    img {
+      height: 30rem;
     }
-}
+  }
 
+  @include respond(tab-port) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    img {
+      height: 30rem;
+    }
+  }
+}

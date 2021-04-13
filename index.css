@@ -12,20 +12,21 @@
   }
 }
 .scroll__down {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 80%;
-  left: 50%;
+  transform: translateY(15rem);
 }
-@media (max-width: 75rem) {
+@media (max-width: 56.25em) {
   .scroll__down {
-    top: 90%;
-    left: 50%;
+    transform: translateY(12rem);
   }
 }
 @media (max-width: 37.5em) {
   .scroll__down {
-    top: 90%;
-    left: 45%;
+    transform: translateY(5rem);
+    height: 1rem;
   }
 }
 .scroll__down a {
@@ -34,6 +35,11 @@
   position: absolute;
   text-decoration: none;
   color: #F0EFEF;
+}
+@media (max-width: 37.5em) {
+  .scroll__down a {
+    font-size: 35%;
+  }
 }
 .scroll__down span {
   position: absolute;
@@ -51,6 +57,13 @@
   -webkit-animation: scrolldown 1.5s infinite;
   animation: scrolldown 1.5s infinite;
 }
+@media (max-width: 37.5em) {
+  .scroll__down span {
+    height: 1rem;
+    width: 1rem;
+    left: 60%;
+  }
+}
 .scroll__down span:nth-child(1) {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
@@ -66,7 +79,7 @@
   animation-delay: 0.3s;
 }
 
-.critics__box, .game__content, .card, .section__trailer--cover, .trailer__content, .content__about {
+.critics__box, .game__content, .game__cards .card, .section__trailer--cover, .trailer__content, .content__about {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -92,21 +105,14 @@
 }
 
 .header {
-  position: relative;
-  height: 100vh;
-  background-image: url("../images/background.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__background {
+  width: 100%;
   background-size: cover;
-  background-position: top;
-}
-@media (max-width: 75rem) {
-  .header {
-    background-position: 20%;
-  }
-}
-@media (max-width: 37.5em) {
-  .header {
-    background-position: 30%;
-  }
 }
 
 .logo__box {
@@ -117,19 +123,19 @@
 }
 @media (max-width: 75rem) {
   .logo__box {
-    top: 60%;
+    top: 40%;
   }
 }
 @media (max-width: 56.25em) {
   .logo__box {
-    top: 40%;
-    left: 15%;
+    top: 20%;
+    left: 65%;
   }
 }
 @media (max-width: 37.5em) {
   .logo__box {
-    top: 35%;
-    left: 5%;
+    top: 15%;
+    left: 60%;
   }
 }
 
@@ -138,12 +144,12 @@
 }
 @media (max-width: 75rem) {
   .logo {
-    height: 8rem;
+    height: 10rem;
   }
 }
 @media (max-width: 37.5em) {
   .logo {
-    height: 8rem;
+    height: 6.5rem;
   }
 }
 
@@ -153,7 +159,7 @@
   background-color: #11182A;
   height: 100vh;
 }
-@media (max-width: 37.5em) {
+@media (max-width: 56.25em) {
   .section__about {
     display: flex;
     flex-direction: column;
@@ -203,6 +209,11 @@
     height: 30rem;
   }
 }
+@media (max-width: 56.25em) {
+  .section__about--spider {
+    display: none;
+  }
+}
 @media (max-width: 37.5em) {
   .section__about--spider {
     display: none;
@@ -213,6 +224,16 @@
   display: none;
 }
 @media (max-width: 37.5em) {
+  .section__about--spider-mobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+  .section__about--spider-mobile img {
+    height: 30rem;
+  }
+}
+@media (max-width: 56.25em) {
   .section__about--spider-mobile {
     display: flex;
     justify-content: center;
@@ -257,6 +278,12 @@
     height: 75vh;
   }
 }
+@media (max-width: 56.25em) {
+  .section__game {
+    height: 200vh;
+    clip-path: polygon(100% 0%, 100% 95%, 0% 100%, 0% 0%);
+  }
+}
 @media (max-width: 37.5em) {
   .section__game {
     height: auto;
@@ -285,6 +312,14 @@
   grid-template-columns: repeat(3, 1fr);
   color: #F0EFEF;
 }
+@media (max-width: 56.25em) {
+  .game__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 1rem 4rem;
+  }
+}
 @media (max-width: 37.5em) {
   .game__cards {
     display: grid;
@@ -296,27 +331,30 @@
     margin: 0 auto;
   }
 }
-
-.card h2 {
+.game__cards .card h2 {
   margin-top: 1rem;
   text-align: center;
 }
-.card p {
+.game__cards .card p {
   padding: 1rem 4rem;
   text-align: center;
 }
-
-.card-image {
+.game__cards .card-image {
   border-radius: 0.2rem;
   height: 10rem;
   box-shadow: 0.2rem 0.5rem 2rem rgba(175, 165, 165, 0.171);
   transition: all 0.2s;
 }
-.card-image:hover {
+.game__cards .card-image:hover {
   transform: scale(1.07);
 }
+@media (max-width: 56.25em) {
+  .game__cards .card-image {
+    height: 25rem;
+  }
+}
 @media (max-width: 37.5em) {
-  .card-image {
+  .game__cards .card-image {
     height: 15rem;
   }
 }
@@ -379,6 +417,14 @@
 @media (max-width: 75rem) {
   .section__critics {
     height: 65vh;
+  }
+}
+@media (max-width: 56.25em) {
+  .section__critics {
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 @media (max-width: 37.5em) {
