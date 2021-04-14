@@ -56,4 +56,4 @@ https://www.linkedin.com/feed/update/urn:li:activity:6787771542475481088/
 
 
 
-[^Developed by Gabriel Vicente]: 
+[^Developed by]: Gabriel Vicente 
