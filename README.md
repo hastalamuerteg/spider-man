@@ -24,19 +24,19 @@ I've created this project to study and apply responsive web layout techniques ma
 
 ### Header 
 
-![header] (https://github.com/hastalamuerteg/spider-man/blob/main/screenshots/header.jpeg)
+![header](./screenshots/header.jpeg)
 
 ### About the game
 
-![about] (https://github.com/hastalamuerteg/spider-man/blob/main/screenshots/about.jpeg)
+![about](./screenshots/about.jpeg)
 
 ### Trailer
 
-![trailer] (https://github.com/hastalamuerteg/spider-man/blob/main/screenshots/trailer.jpeg)
+![trailer](./screenshots/trailer.jpeg)
 
 ### Critics about the game
 
-![critics] (https://github.com/hastalamuerteg/spider-man/blob/main/screenshots/critics.jpeg)
+![critics](./screenshots/critics.jpeg)
 
 
 
